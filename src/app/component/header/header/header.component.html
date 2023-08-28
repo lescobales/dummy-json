@@ -1,0 +1,11 @@
+<div class="position-relative mb-5 bg-black text-white px-4 py-5">
+  <h1 class="text-center text-uppercase">Dummy json</h1>
+
+  <button
+		  *ngIf="isConnected$ | async"
+		  (click)="onLogoutClick()"
+    class="btn btn-outline-light position-absolute top-0 end-0 me-2 mt-2">
+    ME DECONNECTER
+  </button>
+  
+</div>

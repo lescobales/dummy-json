@@ -1,0 +1,32 @@
+<div class="row col-6 card shadow mx-auto mt-3">
+
+  <h3 class="text-center mt-3">{{title}}</h3>
+
+  <form [formGroup]="productForm" (ngSubmit)="onSubmitForm()" class="my-3">
+
+    
+
+    <div class="mb-3">
+      <label for="title">Titre</label>
+      <input id="title" formControlName="title" class="form-control" placeholder="Titre">
+    </div>
+
+    <div class="mb-3">
+      <label for="description">Description</label>
+      <textarea id="description" formControlName="description" class="form-control" placeholder="Description"></textarea>
+    </div>
+
+
+
+    
+
+    <button type="submit" class="d-grid col-4 mx-auto btn btn-dark" [disabled]="productForm.invalid">
+      {{labelBtn}}
+    </button>
+  </form>
+
+  <a routerLink="/produits" class="text-center text-dark mb-2">
+    RETOUR
+  </a>
+
+</div>

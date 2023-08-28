@@ -1,0 +1,26 @@
+<nav aria-label="...">
+  <ul class="pagination">
+    <li class="page-item" role ="button">
+      <a class="page-link" 
+	 tabindex="-1"
+	 (click)="onPageClick('previous')"
+	 [ngClass]="isMinPage ? 'disabled' : ''">
+      Previous</a>
+    </li>
+    <li *ngFor="let _ of pages; index as i"
+	class="page-item"
+	role="button"
+	><a class="page-link" 
+	    (click)="onPageClick(i+1)"
+	    [ngClass]="currentPage == i+1 ? 'active': ''">
+		{{i+1}}
+    </a></li>
+    <li
+	role="button">
+      <a class="page-link"
+	 (click)="onPageClick('next')"
+	 [ngClass]="isMaxPage ? 'disabled' : ''">Next</a>
+    </li>
+  </ul>
+</nav>
+
